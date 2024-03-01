@@ -9,5 +9,5 @@ A music player application similar to Spotify (but Orange) made by _Flutter + PH
 ## Screenshots
 
 <p align="center">
-<img src="assets/DopatifyOverview.png" alt="Dopatify Overview"/>
+<img src="./assets/Overview.png" alt="Dopatify Overview"/>
 </p>
