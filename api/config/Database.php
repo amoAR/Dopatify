@@ -1,10 +1,10 @@
 <?php
 class Database
 {
-    private $host = 'localhost';
-    private $dbName = 'vpnguy_dopotify';
-    private $username = 'vpnguy_Django_AJ';
-    private $password = 'Arm@nj@vadi83';
+    private $host = '';
+    private $dbName = '';
+    private $username = '';
+    private $password = '';
     
     private $connection;
 

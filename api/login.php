@@ -2,17 +2,17 @@
 include "requireAll.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    if (isset($_GET['username']) && isset($_GET['password']))
+    if (isset($_POST['username']) && isset($_POST['password']))
     {
-        $username = htmlspecialchars($_GET['username']);
-        $email    = htmlspecialchars($_GET['email']);
-        $password = htmlspecialchars($_GET['password']);
+        $username = htmlspecialchars($_POST['username']);
+        $email    = htmlspecialchars($_POST['email']);
+        $password = htmlspecialchars($_POST['password']);
         
         $database = new Database();
         $dbConnection = $database->connect();
         $user = new Users($dbConnection);
         
-        $result = $user->LoginUser($_GET['username'], $_GET['email'], $_GET['password']);
+        $result = $user->LoginUser($_POST['username'], $_POST['email'], $_POST['password']);
 
         if ($result)
         {

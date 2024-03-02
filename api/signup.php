@@ -3,18 +3,16 @@ include "requireAll.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
     if (
-        isset($_GET['firstname']) && isset($_GET['lastname'])
-        && isset($_GET['username']) && isset($_GET['password'])
-        && isset($_GET['email'])
+        isset($_POST['firstname']) && isset($_POST['lastname'])
+        && isset($_POST['username']) && isset($_POST['password'])
+        && isset($_POST['email'])
     )
     {
-        //        $username = strtolower(htmlspecialchars($_GET['username']));
-        //        $password = (htmlspecialchars($_GET['password']));
-        $firstName = htmlspecialchars($_GET['firstname']);
-        $lastName = htmlspecialchars($_GET['lastname']);
-        $username = htmlspecialchars($_GET['username']);
-        $password = htmlspecialchars($_GET['password']);
-        $email = htmlspecialchars($_GET['email']);
+        $firstName = htmlspecialchars($_POST['firstname']);
+        $lastName = htmlspecialchars($_POST['lastname']);
+        $username = htmlspecialchars($_POST['username']);
+        $password = htmlspecialchars($_POST['password']);
+        $email = htmlspecialchars($_POST['email']);
         $database = new Database();
         $dbConnection = $database->connect();
         $user = new Users($dbConnection);
